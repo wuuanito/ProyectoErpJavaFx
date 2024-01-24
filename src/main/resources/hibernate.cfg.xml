@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:sqlite:C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\chinook.db</property>
+    <property name="connection.driver_class">org.sqlite.JDBC</property>
+      <mapping class="Controlador.AlbumsEntity"/>
+      <mapping class="Controlador.ArtistsEntity"/>
+      <mapping class="Controlador.CustomersEntity"/>
+      <mapping class="Controlador.EmployeesEntity"/>
+      <mapping class="Controlador.GenresEntity"/>
+      <mapping class="Controlador.InvoiceItemsEntity"/>
+      <mapping class="Controlador.InvoicesEntity"/>
+      <mapping class="Controlador.MediaTypesEntity"/>
+      <mapping class="Controlador.PlaylistTrackEntity"/>
+      <mapping class="Controlador.PlaylistsEntity"/>
+      <mapping class="Controlador.TracksEntity"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

@@ -1,4 +1,4 @@
-module com.example.proyectoerpjavafx {
+module main {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,7 +10,11 @@ module com.example.proyectoerpjavafx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires javax.persistence;
+    requires java.sql;
 
-    opens com.example.proyectoerpjavafx to javafx.fxml;
-    exports com.example.proyectoerpjavafx;
+    opens Aplicacion to javafx.fxml;
+    exports Aplicacion;
+    exports Controlador;
+    opens Controlador to javafx.fxml;
 }

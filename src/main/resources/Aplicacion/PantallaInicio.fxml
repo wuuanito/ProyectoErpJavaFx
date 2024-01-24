@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.EmpleadoCliente">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c57d56;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDOS" wrappingWidth="267.2734375">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/musica.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffb48a;" GridPane.columnIndex="1">
+         <children>
+            <Text fill="WHITE" layoutX="69.0" layoutY="182.0" stroke="#ff9900" strokeType="OUTSIDE" strokeWidth="0.0" text="INICIO DE SESION" wrappingWidth="161.12890625">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="110.0" fitWidth="87.0" layoutX="107.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/BuenAvatar.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="18.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUARIO" wrappingWidth="55.8203125" />
+            <Text layoutX="14.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRASEÑA" wrappingWidth="95.8203125" />
+            <TextField layoutX="107.0" layoutY="215.0" />
+            <PasswordField layoutX="107.0" layoutY="258.0" />
+            <Button layoutX="142.0" layoutY="295.0" mnemonicParsing="false" text="ENTRAR" />
+            <Text layoutX="17.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿ERES NUEVO?  CREA UNA CUENTA">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Text>
+            <Text layoutX="100.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿HAS OLVIDADO TU CONTRASEÑA?">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+
+</GridPane>

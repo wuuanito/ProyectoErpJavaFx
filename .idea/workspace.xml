@@ -1,34 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="" />
+    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Imagenes/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Imagenes/imagen_cliente.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Imagenes/imagen_empleado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Imagenes/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Imagenes/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chinook.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/EmpleadoCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/AlbumsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/ArtistsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/CustomersEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/EmployeesEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/GenresEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/InvoiceItemsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/InvoicesEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/MediaTypesEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntityPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/TracksEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/VentanaClientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Imagenes/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Imagenes/imagen_cliente.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Imagenes/imagen_empleado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/BuenAvatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musica.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PanelClienteBasic.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/EmpleadoCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/EmpleadoCliente.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2b8k86byYFrKApf8JXAlEIpn64U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
+    "Application.InicioAplicacion.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JPA.DatabaseSchemaImportDialog": "6bc5abb0-c9a1-4c0d-965f-46f339848b0d",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Juan/Desktop/ProyectoErpJavaFx/src/main/java/Aplicacion",
+    "last_opened_file_path": "C:/Users/Juan/Desktop/ProyectoErpJavaFx",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.39310345",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\Imagenes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Controlador" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Aplicacion" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Imagenes" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Aplicacion" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="Controlador" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -44,10 +163,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705603930854</updated>
+      <workItem from="1705603931898" duration="3187000" />
+      <workItem from="1705609447293" duration="485000" />
+      <workItem from="1705609959490" duration="52000" />
+      <workItem from="1705628510830" duration="303000" />
+      <workItem from="1705628908118" duration="1069000" />
+      <workItem from="1705658380561" duration="1397000" />
+      <workItem from="1705659825840" duration="930000" />
+      <workItem from="1705685576469" duration="754000" />
+      <workItem from="1705710951991" duration="2328000" />
+      <workItem from="1705889658531" duration="45000" />
+      <workItem from="1705889717914" duration="177000" />
+      <workItem from="1705942290107" duration="2264000" />
+      <workItem from="1705945730067" duration="780000" />
+      <workItem from="1706029862998" duration="41000" />
+      <workItem from="1706115922349" duration="1939000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

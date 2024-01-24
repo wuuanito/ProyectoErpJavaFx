@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane orientation="VERTICAL" prefHeight="102.0" prefWidth="900.0" />
+      <SplitPane layoutX="740.0" layoutY="102.0" orientation="VERTICAL" prefHeight="498.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="158.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
