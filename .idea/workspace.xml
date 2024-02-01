@@ -4,57 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Imagenes/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Imagenes/imagen_cliente.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Imagenes/imagen_empleado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Imagenes/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Imagenes/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chinook.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/EmpleadoCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/AlbumsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/ArtistsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/CustomersEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/EmployeesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/GenresEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/InvoiceItemsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/InvoicesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/MediaTypesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/TracksEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/VentanaClientes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Imagenes/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Imagenes/imagen_cliente.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Imagenes/imagen_empleado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/BuenAvatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musica.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PanelClienteBasic.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Creacion De una Pantalla Inicial Idonea">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorMusica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/VentanaPrueba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/albums.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/artistas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/avatarbueno.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/buscar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/compra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/genero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8-música-256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/listado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musicaBuena.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musicadoble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaPrueba.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/musica.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/imagen_cliente.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/imagen_cliente.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/imagen_empleado.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/imagen_empleado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/key.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/EmpleadoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/EmpleadoCliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/AlbumsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/AlbumsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/ArtistsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/ArtistsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/CustomersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/CustomersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/EmployeesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/EmployeesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/GenresEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/GenresEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/InvoiceItemsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoiceItemsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/InvoicesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoicesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/MediaTypesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/MediaTypesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntityPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntityPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/TracksEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/TracksEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/VentanaClientes.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/EmpleadoCliente.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musica.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musica.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/PanelClienteBasic.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,49 +90,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.InicioAplicacion.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JPA.DatabaseSchemaImportDialog": "6bc5abb0-c9a1-4c0d-965f-46f339848b0d",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Juan/Desktop/ProyectoErpJavaFx/src/main/java/Aplicacion",
-    "last_opened_file_path": "C:/Users/Juan/Desktop/ProyectoErpJavaFx",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.39310345",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InicioAplicacion.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;6bc5abb0-c9a1-4c0d-965f-46f339848b0d&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Juan/Desktop/ProyectoErpJavaFx/src/main/java/Aplicacion&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/javafx-sdk-21.0.1/lib/jfoenix-9.0.10.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39310345&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\Imagenes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Controlador" />
-      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Aplicacion" />
-      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Aplicacion" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Controlador" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Imagenes" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -177,8 +172,22 @@
       <workItem from="1705942290107" duration="2264000" />
       <workItem from="1705945730067" duration="780000" />
       <workItem from="1706029862998" duration="41000" />
-      <workItem from="1706115922349" duration="1939000" />
+      <workItem from="1706115922349" duration="6102000" />
+      <workItem from="1706123251502" duration="1394000" />
+      <workItem from="1706195685300" duration="11062000" />
+      <workItem from="1706282259582" duration="14000" />
+      <workItem from="1706297369858" duration="2610000" />
+      <workItem from="1706541826072" duration="4227000" />
     </task>
+    <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
+      <option name="closed" value="true" />
+      <created>1706118496417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706118496417</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,5 +206,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creacion De una Pantalla Inicial Idonea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion De una Pantalla Inicial Idonea" />
   </component>
 </project>

@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.EmpleadoCliente">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.ControladorInicioAplicacion">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -21,7 +21,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c57d56;">
+      <AnchorPane prefHeight="400.0" prefWidth="321.0" style="-fx-background-color: #c57d56;">
          <children>
             <Text fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDOS" wrappingWidth="267.2734375">
                <font>
@@ -51,17 +51,17 @@
             <Text layoutX="14.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRASEÑA" wrappingWidth="95.8203125" />
             <TextField layoutX="107.0" layoutY="215.0" />
             <PasswordField layoutX="107.0" layoutY="258.0" />
-            <Button layoutX="142.0" layoutY="295.0" mnemonicParsing="false" text="ENTRAR" />
-            <Text layoutX="17.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿ERES NUEVO?  CREA UNA CUENTA">
+            <Button fx:id="loginButton" layoutX="145.0" layoutY="295.0" mnemonicParsing="false" onAction="#login" style="-fx-background-radius: 20;" text="ENTRAR" />
+            <Button id="usuarioNuevo" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="144.0" style="-fx-background-radius: 20;" text="¿Eres nuevo? Crea una cuenta">
                <font>
-                  <Font size="9.0" />
+                  <Font name="System Bold" size="9.0" />
                </font>
-            </Text>
-            <Text layoutX="100.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿HAS OLVIDADO TU CONTRASEÑA?">
+            </Button>
+            <Button id="contraOlvidada" layoutX="170.0" layoutY="361.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="Contraseña olvidada">
                <font>
-                  <Font size="9.0" />
+                  <Font name="System Bold" size="9.0" />
                </font>
-            </Text>
+            </Button>
          </children>
       </AnchorPane>
    </children>

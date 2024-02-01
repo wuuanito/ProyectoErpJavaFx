@@ -15,6 +15,6 @@ module main {
 
     opens Aplicacion to javafx.fxml;
     exports Aplicacion;
-    exports Controlador;
-    opens Controlador to javafx.fxml;
+    exports MapeoHibernate;
+    opens MapeoHibernate to javafx.fxml;
 }

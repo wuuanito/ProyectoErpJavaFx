@@ -23,7 +23,8 @@ public class InicioAplicacion extends Application {
             stage.setScene(scene);
             stage.show();
             stage.setResizable(false);
-            
+
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -31,5 +32,4 @@ public class InicioAplicacion extends Application {
     }
 
 
-    }
-
+}

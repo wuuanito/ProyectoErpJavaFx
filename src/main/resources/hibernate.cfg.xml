@@ -6,17 +6,17 @@
   <session-factory>
     <property name="connection.url">jdbc:sqlite:C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\chinook.db</property>
     <property name="connection.driver_class">org.sqlite.JDBC</property>
-      <mapping class="Controlador.AlbumsEntity"/>
-      <mapping class="Controlador.ArtistsEntity"/>
-      <mapping class="Controlador.CustomersEntity"/>
-      <mapping class="Controlador.EmployeesEntity"/>
-      <mapping class="Controlador.GenresEntity"/>
-      <mapping class="Controlador.InvoiceItemsEntity"/>
-      <mapping class="Controlador.InvoicesEntity"/>
-      <mapping class="Controlador.MediaTypesEntity"/>
-      <mapping class="Controlador.PlaylistTrackEntity"/>
-      <mapping class="Controlador.PlaylistsEntity"/>
-      <mapping class="Controlador.TracksEntity"/>
+      <mapping class="MapeoHibernate.AlbumsEntity"/>
+      <mapping class="MapeoHibernate.ArtistsEntity"/>
+      <mapping class="MapeoHibernate.CustomersEntity"/>
+      <mapping class="MapeoHibernate.EmployeesEntity"/>
+      <mapping class="MapeoHibernate.GenresEntity"/>
+      <mapping class="MapeoHibernate.InvoiceItemsEntity"/>
+      <mapping class="MapeoHibernate.InvoicesEntity"/>
+      <mapping class="MapeoHibernate.MediaTypesEntity"/>
+      <mapping class="MapeoHibernate.PlaylistTrackEntity"/>
+      <mapping class="MapeoHibernate.PlaylistsEntity"/>
+      <mapping class="MapeoHibernate.TracksEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: #c57d56;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="235.0" text="INICIO" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="22.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="52.0" prefWidth="6.0" />
+            <HBox maxHeight="-Infinity" prefHeight="26.0" prefWidth="204.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="180.0" promptText="Buscar..." style="-fx-background-radius: 20;" />
+                  <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/buscar.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <HBox.margin>
+                        <Insets left="5.0" top="3.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="50.0" prefWidth="199.0" HBox.hgrow="ALWAYS" />
+            <HBox prefHeight="50.0" prefWidth="146.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="104.0" text="Usuario">
+                     <font>
+                        <Font name="Constantia Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/avatarbueno.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="401.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="199.0" prefWidth="250.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="104.0" text="  Menu">
+                     <font>
+                        <Font name="Constantia Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/albums.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="33.0" prefWidth="104.0" text="Albums">
+                           <font>
+                              <Font name="Constantia Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/genero.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="33.0" prefWidth="104.0" text="Generos">
+                           <font>
+                              <Font name="Constantia Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="250.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/artistas.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="33.0" prefWidth="104.0" text="Artistas">
+                           <font>
+                              <Font name="Constantia Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="137.0" prefWidth="250.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="104.0" text="  Tu Musica">
+                     <font>
+                        <Font name="Constantia Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/listado.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="33.0" prefWidth="104.0" text="PlayLists">
+                           <font>
+                              <Font name="Constantia Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/musicaBuena.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="34.0" prefWidth="147.0" text="   Musica Guardada">
+                           <font>
+                              <Font name="Constantia Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="114.0" prefWidth="250.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="104.0" text="  Compra">
+                     <font>
+                        <Font name="Constantia Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/compra.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" style="-fx-background-radius: 20; -fx-background-color: black;" text="Comprar Cancion" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="18.0" prefWidth="159.0" text="ALBUMS">
+               <font>
+                  <Font name="Ebrima Bold" size="23.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+               <content>
+                  <HBox fx:id="musicaLayout" prefHeight="118.0" prefWidth="651.0" />
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
