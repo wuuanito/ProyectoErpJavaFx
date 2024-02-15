@@ -5,41 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Creacion De una secundaria">
-      <change afterPath="$PROJECT_DIR$/chinook.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/AlbumClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ArtistClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/CustomerClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/EmployeeClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/GenreClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InvoiceClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/MediatypeClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/TrackClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorMusica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/VentanaPrueba.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/AlbumsEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/ArtistsEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/CustomersEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/EmployeesEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/GenresEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoiceItemsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InvoicelineClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoicesEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/MediaTypesEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntityPK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistsEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/TracksEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaPrueba.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/musica.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +110,19 @@
       <recent name="Controlador" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -201,6 +183,7 @@
       <workItem from="1707958429209" duration="624000" />
       <workItem from="1707959067096" duration="16000" />
       <workItem from="1707959096065" duration="379000" />
+      <workItem from="1708016902046" duration="5869000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />

@@ -73,6 +73,8 @@ public class ControladorInicioAplicacion implements Initializable {
             stage.show();
 
             Stage miStage = (Stage) loginButton.getScene().getWindow();
+            //iniciar metodo inicialize de la ventana de clientes
+            controlador.initialize(null, null);
             miStage.close();
             stage.setResizable(false);
         } catch (IOException e) {

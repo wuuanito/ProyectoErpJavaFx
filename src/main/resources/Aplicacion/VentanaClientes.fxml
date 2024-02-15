@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.Controlador_VentanaCliente">
    <top>
       <HBox prefHeight="50.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: #c57d56;" BorderPane.alignment="CENTER">
          <children>
@@ -85,7 +86,7 @@
                         <Font name="Constantia Bold" size="16.0" />
                      </font>
                   </Label>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                  <HBox fx:id="MenuAlbums" alignment="CENTER" onMouseEntered="#cambiarFormaCursor" onMouseExited="#restaurarFormaCursor" onMousePressed="#cambiarFondoYCursor" onMouseReleased="#restaurarFondoYCursor" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -197,7 +198,7 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="18.0" prefWidth="159.0" text="ALBUMS">
+            <Label fx:id="LabelAlbums" prefHeight="18.0" prefWidth="159.0" text="ALBUMS">
                <font>
                   <Font name="Ebrima Bold" size="23.0" />
                </font>
@@ -206,16 +207,16 @@
                <content>
                   <HBox fx:id="musicaLayout" prefHeight="118.0" prefWidth="651.0">
                      <children>
-                        <TableView fx:id="tableView" prefHeight="118.0" prefWidth="550.0"
-                        id="tableView">
+                        <TableView id="tableView" fx:id="tableView" prefHeight="118.0" prefWidth="550.0">
                           <columns>
-                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Album id" id="idColumn"/>
-                            <TableColumn prefWidth="474.0" text="Title" fx:id="titleColumn" id="titleColum" />
+                            <TableColumn  fx:id="idColumn" prefWidth="75.0" text="Album id" />
+                            <TableColumn  fx:id="titleColumn" prefWidth="474.0" text="Title" />
                           </columns>
                         </TableView>
                      </children></HBox>
                </content>
             </ScrollPane>
+            <TextArea fx:id="areaText" prefHeight="200.0" prefWidth="200.0" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
