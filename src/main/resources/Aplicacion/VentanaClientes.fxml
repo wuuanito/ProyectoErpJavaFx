@@ -4,8 +4,11 @@
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <HBox prefHeight="50.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: #c57d56;" BorderPane.alignment="CENTER">
          <children>
@@ -30,7 +33,14 @@
                   <Insets top="10.0" />
                </HBox.margin>
                <children>
-                  <TextField prefHeight="26.0" prefWidth="180.0" promptText="Buscar..." style="-fx-background-radius: 20;" />
+                  <!-- Agregar TextField de búsqueda -->
+                  <TextField fx:id="searchField" prefHeight="26.0" prefWidth="406.0" promptText="Buscar..." style="-fx-background-radius: 20;" />
+                  <!-- Agregar ListView de sugerencias -->
+                  <ListView fx:id="suggestionsListView" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </ListView>
                   <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Imagenes/buscar.png" />
@@ -194,7 +204,16 @@
             </Label>
             <ScrollPane prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: transparent;">
                <content>
-                  <HBox fx:id="musicaLayout" prefHeight="118.0" prefWidth="651.0" />
+                  <HBox fx:id="musicaLayout" prefHeight="118.0" prefWidth="651.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="118.0" prefWidth="550.0"
+                        id="tableView">
+                          <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Album id" id="idColumn"/>
+                            <TableColumn prefWidth="474.0" text="Title" fx:id="titleColumn" id="titleColum" />
+                          </columns>
+                        </TableView>
+                     </children></HBox>
                </content>
             </ScrollPane>
          </children>

@@ -1,20 +1,21 @@
-module main {
+module Aplicacion {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.web;
+    requires javafx.graphics;
+    requires javafx.base;
+    requires java.desktop;
+    requires java.naming;
 
     requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires net.synedra.validatorfx;
-    requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
-    requires com.almasb.fxgl.all;
-    requires javax.persistence;
     requires java.sql;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
 
-    opens Aplicacion to javafx.fxml;
-    exports Aplicacion;
-    exports MapeoHibernate;
-    opens MapeoHibernate to javafx.fxml;
+
+
+    opens Aplicacion to org.hibernate.orm.core, javafx.fxml;
+
+ exports Aplicacion;
+
 }
+

@@ -1,26 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
-    "-//Hibernate/Hibernate Configuration DTD//EN"
-    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:sqlite:C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\chinook.db</property>
-    <property name="connection.driver_class">org.sqlite.JDBC</property>
-      <mapping class="MapeoHibernate.AlbumsEntity"/>
-      <mapping class="MapeoHibernate.ArtistsEntity"/>
-      <mapping class="MapeoHibernate.CustomersEntity"/>
-      <mapping class="MapeoHibernate.EmployeesEntity"/>
-      <mapping class="MapeoHibernate.GenresEntity"/>
-      <mapping class="MapeoHibernate.InvoiceItemsEntity"/>
-      <mapping class="MapeoHibernate.InvoicesEntity"/>
-      <mapping class="MapeoHibernate.MediaTypesEntity"/>
-      <mapping class="MapeoHibernate.PlaylistTrackEntity"/>
-      <mapping class="MapeoHibernate.PlaylistsEntity"/>
-      <mapping class="MapeoHibernate.TracksEntity"/>
-      <!-- <property name="connection.username"/> -->
-    <!-- <property name="connection.password"/> -->
-
-    <!-- DB schema will be updated if needed -->
-    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    <property name="connection.url">jdbc:mysql://localhost:3306/chinook</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+    <mapping class="Aplicacion.AlbumClass"/>
+    <mapping class="Aplicacion.ArtistClass"/>
+    <mapping class="Aplicacion.CustomerClass"/>
+    <mapping class="Aplicacion.EmployeeClass"/>
+    <mapping class="Aplicacion.GenreClass"/>
+    <mapping class="Aplicacion.InvoiceClass"/>
+    <mapping class="Aplicacion.InvoicelineClass"/>
+    <mapping class="Aplicacion.MediatypeClass"/>
+    <mapping class="Aplicacion.TrackClass"/>
   </session-factory>
 </hibernate-configuration>

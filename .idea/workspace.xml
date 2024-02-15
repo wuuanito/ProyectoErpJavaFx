@@ -4,50 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Creacion De una Pantalla Inicial Idonea">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorMusica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/VentanaPrueba.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/albums.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/artistas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/avatarbueno.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/buscar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/compra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/genero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8-música-256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/listado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musicaBuena.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musicadoble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaPrueba.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/musica.fxml" afterDir="false" />
+    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Creacion De una secundaria">
+      <change afterPath="$PROJECT_DIR$/chinook.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/AlbumClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ArtistClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/CustomerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/EmployeeClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/GenreClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InvoiceClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/MediatypeClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/TrackClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imagenes/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imagenes/imagen_cliente.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/imagen_cliente.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imagenes/imagen_empleado.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/imagen_empleado.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imagenes/key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imagenes/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/EmpleadoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorMusica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/AlbumsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/AlbumsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/ArtistsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/ArtistsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/CustomersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/CustomersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/EmployeesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/EmployeesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/GenresEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/GenresEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/InvoiceItemsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoiceItemsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/InvoicesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoicesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/MediaTypesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/MediaTypesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistTrackEntityPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntityPK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/PlaylistsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/TracksEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapeoHibernate/TracksEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/VentanaClientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/VentanaPrueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/AlbumsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/ArtistsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/CustomersEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/EmployeesEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/GenresEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoiceItemsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InvoicelineClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/InvoicesEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/MediaTypesEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistTrackEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/PlaylistsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapeoHibernate/TracksEntity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musica.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/musica.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/PanelClienteBasic.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaPrueba.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/musica.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,15 +96,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Juan/Desktop/ProyectoErpJavaFx/src/main/java/Aplicacion&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/javafx-sdk-21.0.1/lib/jfoenix-9.0.10.jar&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Juan/Desktop/ProyectoErpJavaFx/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juan/Desktop/ProyectoErpJavaFx/src/main/java/MapeoHibernate&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.39310345&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
@@ -121,12 +113,16 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+      &quot;sqlite&quot;,
+      &quot;mysql&quot;
     ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\MapeoHibernate" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion" />
+      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\Imagenes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -140,6 +136,8 @@
       <recent name="Aplicacion" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="MapeoHibernate" />
+      <recent name="" />
       <recent name="Controlador" />
     </key>
   </component>
@@ -147,6 +145,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
       </set>
     </attachedChunks>
   </component>
@@ -178,6 +177,30 @@
       <workItem from="1706282259582" duration="14000" />
       <workItem from="1706297369858" duration="2610000" />
       <workItem from="1706541826072" duration="4227000" />
+      <workItem from="1706806521339" duration="610000" />
+      <workItem from="1706807148239" duration="1580000" />
+      <workItem from="1706808822356" duration="492000" />
+      <workItem from="1706809338322" duration="340000" />
+      <workItem from="1706809696728" duration="660000" />
+      <workItem from="1706810391464" duration="186000" />
+      <workItem from="1706810588973" duration="1267000" />
+      <workItem from="1706889554060" duration="229000" />
+      <workItem from="1707234013771" duration="602000" />
+      <workItem from="1707264382753" duration="6495000" />
+      <workItem from="1707408060044" duration="2489000" />
+      <workItem from="1707414167174" duration="30000" />
+      <workItem from="1707414288920" duration="18000" />
+      <workItem from="1707414317135" duration="198000" />
+      <workItem from="1707414527632" duration="10000" />
+      <workItem from="1707414546391" duration="4000" />
+      <workItem from="1707414554912" duration="15000" />
+      <workItem from="1707414579299" duration="73000" />
+      <workItem from="1707414704174" duration="596000" />
+      <workItem from="1707415355846" duration="1054000" />
+      <workItem from="1707431299212" duration="39000" />
+      <workItem from="1707958429209" duration="624000" />
+      <workItem from="1707959067096" duration="16000" />
+      <workItem from="1707959096065" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />
@@ -187,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706118496417</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creacion De una secundaria">
+      <option name="closed" value="true" />
+      <created>1706806680533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706806680533</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +238,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creacion De una Pantalla Inicial Idonea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion De una Pantalla Inicial Idonea" />
+    <MESSAGE value="Creacion De una secundaria" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion De una secundaria" />
   </component>
 </project>
