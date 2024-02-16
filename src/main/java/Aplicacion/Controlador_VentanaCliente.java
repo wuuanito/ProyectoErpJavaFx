@@ -2,17 +2,23 @@ package Aplicacion;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -31,55 +37,35 @@ public class Controlador_VentanaCliente implements Initializable {
 
     @FXML
     private TableColumn<AlbumClass, String> titleColumn;
+    @FXML
+    private TextField searchField;
 
     @FXML
     private TextArea areaText;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        SessionFactory sf =  HibernateUtil.getSessionFactory();
-
-        try (Session session = sf.openSession()) {
-
-            Transaction tx = session.beginTransaction();
-            Query Q = session.createQuery("select albumId,title from AlbumClass");
-
-            Iterator I = Q.iterate();
-
-            while(I.hasNext())
-
-            {
-                Object [] resul = (Object[]) I.next();
-                System.out.printf("Id: %d Titulo: %s%n",(Integer)resul[0],(String)resul[1]);
-            }
-
-            tx.commit();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("albumId"));
+        titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
 
     }
     @FXML
     private void cambiarFondoYCursor() {
-        // Cambiar el fondo del HBox a un color gris suave
         MenuAlbums.setStyle("-fx-background-color: #E0E0E0;");
 
-        // Cambiar el cursor a la forma de selección
         MenuAlbums.getScene().setCursor(Cursor.HAND);
 
         idColumn.setCellValueFactory(new PropertyValueFactory<>("albumId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
 
-        // Aquí ejecuta tu consulta HQL y obtén los resultados
         SessionFactory sf = HibernateUtil.getSessionFactory();
+        ObservableList<AlbumClass> albumList = null;
         try (Session session = sf.openSession()) {
             Transaction tx = session.beginTransaction();
             Query query = session.createQuery("select album from AlbumClass album");
             List<AlbumClass> resultList = query.list();
-            ObservableList<AlbumClass> albumList = FXCollections.observableArrayList(resultList);
+            albumList = FXCollections.observableArrayList(resultList);
 
-            // Agregar los resultados al TableView
             tableView.setItems(albumList);
 
             tx.commit();
@@ -87,6 +73,80 @@ public class Controlador_VentanaCliente implements Initializable {
             e.printStackTrace();
         }
 
+        FilteredList<AlbumClass> filteredData = new FilteredList<>(albumList, p -> true);
+
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(album -> {
+                // Si el texto de búsqueda está vacío, mostrar todos los elementos
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (album.getTitle().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                } else if (String.valueOf(album.getAlbumId()).toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+        });
+            tableView.setItems(filteredData);
+
+    }
+    );
+        // Configurar el manejador de eventos de clic en la tabla
+        tableView.setRowFactory(tv -> {
+            TableRow<AlbumClass> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && !row.isEmpty()) {
+                    AlbumClass album = row.getItem();
+                    showAlbumDetails(album);
+                }
+            });
+            return row;
+        });
+        tableView.setRowFactory(tv -> {
+            TableRow<AlbumClass> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 1 && !row.isEmpty()) { // Verificar si se ha hecho clic una vez en la fila
+                    AlbumClass album = row.getItem();
+                    int albumId = album.getAlbumId();
+                    System.out.println("AlbumId seleccionado: " + albumId);
+                    try {
+                        // Cargar el archivo FXML de la ventana de lista de pistas
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaAlbums.fxml"));
+                        Parent root = loader.load();
+
+                        // Obtener el controlador de la ventana de lista de pistas
+                        ControladorVentanaAlbums controller = loader.getController();
+
+                        // Pasar la lista de pistas al controlador
+                        controller.initData(albumId);
+                         //pasar el nombre del album
+                        controller.initData2(album.getTitle());
+
+
+
+
+                        // Crear una nueva escena con el contenido cargado desde el archivo FXML
+                        Scene scene = new Scene(root);
+
+                        // Crear una nueva ventana y mostrarla
+                        Stage stage = new Stage();
+                        stage.setTitle("Lista de Pistas");
+                        stage.setScene(scene);
+                        stage.show();
+                        stage.setResizable(false);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    // Luego puedes pasar este albumId a donde lo necesites, por ejemplo, a la ventana VentanaAlbums.fxml
+                }
+            });
+            return row;
+        });
     }
 
     @FXML
@@ -109,6 +169,34 @@ public class Controlador_VentanaCliente implements Initializable {
         MenuAlbums.getScene().setCursor(Cursor.DEFAULT);
         MenuAlbums.setStyle("-fx-background-color: transparent;");
 
+    }
+    private void showAlbumDetails(AlbumClass album) {
+        try {
+            int albumId = album.getAlbumId();
+            // Cargar el archivo FXML de la ventana de lista de pistas
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaAlbums.fxml"));
+            Parent root = loader.load();
+
+            // Obtener el controlador de la ventana de lista de pistas
+            ControladorVentanaAlbums controller = loader.getController();
+
+            // Pasar la lista de pistas al controlador
+            controller.initData(albumId);
+
+
+
+
+            // Crear una nueva escena con el contenido cargado desde el archivo FXML
+            Scene scene = new Scene(root);
+
+            // Crear una nueva ventana y mostrarla
+            Stage stage = new Stage();
+            stage.setTitle("Lista de Pistas");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

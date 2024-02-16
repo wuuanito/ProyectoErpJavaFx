@@ -9,7 +9,6 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -203,20 +202,19 @@
                   <Font name="Ebrima Bold" size="23.0" />
                </font>
             </Label>
-            <ScrollPane prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+            <ScrollPane prefHeight="463.0" prefWidth="560.0" style="-fx-background-color: transparent;">
                <content>
-                  <HBox fx:id="musicaLayout" prefHeight="118.0" prefWidth="651.0">
+                  <HBox fx:id="musicaLayout" prefHeight="461.0" prefWidth="551.0">
                      <children>
-                        <TableView id="tableView" fx:id="tableView" prefHeight="118.0" prefWidth="550.0">
+                        <TableView id="tableView" fx:id="tableView" prefHeight="323.0" prefWidth="550.0">
                           <columns>
-                            <TableColumn  fx:id="idColumn" prefWidth="75.0" text="Album id" />
-                            <TableColumn  fx:id="titleColumn" prefWidth="474.0" text="Title" />
+                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Album id" />
+                            <TableColumn fx:id="titleColumn" prefWidth="474.0" text="Title" />
                           </columns>
                         </TableView>
                      </children></HBox>
                </content>
             </ScrollPane>
-            <TextArea fx:id="areaText" prefHeight="200.0" prefWidth="200.0" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

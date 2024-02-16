@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Creacion De una secundaria">
+    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Inserccion de datos en tabla">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaAlbums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PruebaAlbum.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaAlbums.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
     </list>
@@ -183,7 +185,8 @@
       <workItem from="1707958429209" duration="624000" />
       <workItem from="1707959067096" duration="16000" />
       <workItem from="1707959096065" duration="379000" />
-      <workItem from="1708016902046" duration="5869000" />
+      <workItem from="1708016902046" duration="6016000" />
+      <workItem from="1708048808821" duration="9950000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />
@@ -201,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706806680533</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Inserccion de datos en tabla">
+      <option name="closed" value="true" />
+      <created>1708022826015</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022826015</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +233,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creacion De una Pantalla Inicial Idonea" />
     <MESSAGE value="Creacion De una secundaria" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion De una secundaria" />
+    <MESSAGE value="Inserccion de datos en tabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserccion de datos en tabla" />
   </component>
 </project>

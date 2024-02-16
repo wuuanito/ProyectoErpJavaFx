@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c57d56;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.ControladorVentanaAlbums">
+    <children>
+        <TableView fx:id="trackTableView" layoutX="49.0" layoutY="94.0" prefHeight="258.0" prefWidth="516.0" style="-fx-background-color: #ffb48a;">
+            <columns>
+                <TableColumn fx:id="titleColumn" prefWidth="305.0" style="-fx-background-color: transparent;" text="Cancion" />
+                <TableColumn fx:id="durationColumn" minWidth="6.0" prefWidth="194.0" text="Duracion" />
+                <!-- Aquí puedes agregar más columnas según tus necesidades -->
+            </columns>
+        </TableView>
+      <Label fx:id="TituloAlbum" layoutX="49.0" layoutY="23.0" prefHeight="53.0" prefWidth="389.0" style="-fx-background-color: transparent;" textFill="#1b0e0e">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
