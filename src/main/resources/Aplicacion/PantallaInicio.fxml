@@ -49,10 +49,10 @@
             </ImageView>
             <Text layoutX="18.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUARIO" wrappingWidth="55.8203125" />
             <Text layoutX="14.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRASEÑA" wrappingWidth="95.8203125" />
-            <TextField layoutX="107.0" layoutY="215.0" />
-            <PasswordField layoutX="107.0" layoutY="258.0" />
+            <TextField fx:id="campouser" id="campouser" layoutX="107.0" layoutY="215.0" />
+            <PasswordField fx:id="campopsswd" id="campopsswd" layoutX="107.0" layoutY="258.0" />
             <Button fx:id="loginButton" layoutX="145.0" layoutY="295.0" mnemonicParsing="false" onAction="#login" style="-fx-background-radius: 20;" text="ENTRAR" />
-            <Button id="usuarioNuevo" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="144.0" style="-fx-background-radius: 20;" text="¿Eres nuevo? Crea una cuenta">
+            <Button fx:id="usuarioNuevo" id="usuarioNuevo" onAction="#crearCuenta" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="144.0" style="-fx-background-radius: 20;" text="¿Eres nuevo? Crea una cuenta">
                <font>
                   <Font name="System Bold" size="9.0" />
                </font>

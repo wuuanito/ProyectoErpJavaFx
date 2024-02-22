@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Inserccion de datos en tabla">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaAlbums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PruebaAlbum.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaAlbums.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorCreacionCuenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/CreacionCuenta.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/tickrojo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/Install League of Legends euw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/PantallaInicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/PruebaAlbum.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,11 +103,11 @@
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\Imagenes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\Desktop\Programacion\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Aplicacion" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Controlador" />
-      <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\java\Imagenes" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Aplicacion" />
@@ -186,7 +192,14 @@
       <workItem from="1707959067096" duration="16000" />
       <workItem from="1707959096065" duration="379000" />
       <workItem from="1708016902046" duration="6016000" />
-      <workItem from="1708048808821" duration="9950000" />
+      <workItem from="1708048808821" duration="9992000" />
+      <workItem from="1708176009423" duration="4641000" />
+      <workItem from="1708301445928" duration="460000" />
+      <workItem from="1708355871214" duration="4410000" />
+      <workItem from="1708381976337" duration="1861000" />
+      <workItem from="1708390632141" duration="269000" />
+      <workItem from="1708390917106" duration="298000" />
+      <workItem from="1708537608708" duration="8179000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />
@@ -212,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708022826015</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Inserccion de datos en tabla">
+      <option name="closed" value="true" />
+      <created>1708058983483</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708058983483</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

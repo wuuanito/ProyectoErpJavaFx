@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="502.0" prefWidth="319.0" style="-fx-background-color: #ffb48a;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.ControladorCreacionCuenta">
+   <children>
+      <Label layoutX="46.0" layoutY="42.0" prefHeight="18.0" prefWidth="227.0" text="NUEVO USUARIO" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="157.0" text="Usuario" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreUsuario" layoutX="71.0" layoutY="183.0" />
+      <PasswordField fx:id="contrauno" layoutX="71.0" layoutY="258.0" />
+      <PasswordField fx:id="contrados" layoutX="71.0" layoutY="319.0" />
+      <Label layoutX="71.0" layoutY="224.0" text="Contraseña" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="295.0" text="Vuelve a introducir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="btonRegistro" layoutX="116.0" layoutY="396.0" mnemonicParsing="false" text="Registrar" onAction="#registrarUsuario" />
+      <ImageView id="tickusuario" fx:id="tickusuario" fitHeight="15.0" fitWidth="23.0" layoutX="229.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@Imagenes/tick.png" />
+         </image>
+      </ImageView>
+      <ImageView id="tickcontrauno" fx:id="tickcontrauno" fitHeight="15.0" fitWidth="23.0" layoutX="229.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@Imagenes/tick.png" />
+         </image>
+      </ImageView>
+      <ImageView id="tickcontrados" fx:id="tickcontrados" fitHeight="15.0" fitWidth="23.0" layoutX="229.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@Imagenes/tick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rojousuario" id="rojousuario" fitHeight="26.0" fitWidth="26.0" layoutX="247.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="rojocontrauno" id="rojocontrauno" fitHeight="26.0" fitWidth="26.0" layoutX="247.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="rojocontrados" id="rojocontrados" fitHeight="26.0" fitWidth="26.0" layoutX="247.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

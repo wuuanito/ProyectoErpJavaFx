@@ -24,10 +24,13 @@ import java.util.*;
 
 public class Controlador_VentanaCliente implements Initializable {
 
+    public static String usuario;
     @FXML
     private Label LabelAlbums;
     @FXML
     private HBox MenuAlbums;
+    @FXML
+    private HBox hboxtabla;
 
     @FXML
     private TableView<AlbumClass> tableView;
@@ -42,15 +45,31 @@ public class Controlador_VentanaCliente implements Initializable {
 
     @FXML
     private TextArea areaText;
+
+    @FXML
+    private Label InfoUsuario;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         idColumn.setCellValueFactory(new PropertyValueFactory<>("albumId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
 
+
+        InfoUsuario.setText(usuario);
+
+        //Al cerrar la ventana salga dos opciones
+        //1. Cerrar la ventana
+
+
+
+
     }
+    private boolean showingAlbums = false;
+
     @FXML
-    private void cambiarFondoYCursor() {
+    private void cambiarFondoYfuncionalidadAlbum() {
         MenuAlbums.setStyle("-fx-background-color: #E0E0E0;");
 
         MenuAlbums.getScene().setCursor(Cursor.HAND);
@@ -72,30 +91,31 @@ public class Controlador_VentanaCliente implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        LabelAlbums.setText("Albums");
 
         FilteredList<AlbumClass> filteredData = new FilteredList<>(albumList, p -> true);
 
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(album -> {
-                // Si el texto de búsqueda está vacío, mostrar todos los elementos
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
+                    filteredData.setPredicate(album -> {
+                        // Si el texto de búsqueda está vacío, mostrar todos los elementos
+                        if (newValue == null || newValue.isEmpty()) {
+                            return true;
+                        }
+
+                        String lowerCaseFilter = newValue.toLowerCase();
+
+                        if (album.getTitle().toLowerCase().contains(lowerCaseFilter)) {
+                            return true;
+                        } else if (String.valueOf(album.getAlbumId()).toLowerCase().contains(lowerCaseFilter)) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    tableView.setItems(filteredData);
+
                 }
+        );
 
-                String lowerCaseFilter = newValue.toLowerCase();
-
-                if (album.getTitle().toLowerCase().contains(lowerCaseFilter)) {
-                    return true;
-                } else if (String.valueOf(album.getAlbumId()).toLowerCase().contains(lowerCaseFilter)) {
-                    return true;
-                }
-                return false;
-        });
-            tableView.setItems(filteredData);
-
-    }
-    );
-        // Configurar el manejador de eventos de clic en la tabla
         tableView.setRowFactory(tv -> {
             TableRow<AlbumClass> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -123,7 +143,7 @@ public class Controlador_VentanaCliente implements Initializable {
 
                         // Pasar la lista de pistas al controlador
                         controller.initData(albumId);
-                         //pasar el nombre del album
+                        //pasar el nombre del album
                         controller.initData2(album.getTitle());
 
 
@@ -149,6 +169,8 @@ public class Controlador_VentanaCliente implements Initializable {
         });
     }
 
+
+
     @FXML
     private void restaurarFondoYCursor() {
         // Restaurar el fondo del HBox al color original
@@ -173,23 +195,11 @@ public class Controlador_VentanaCliente implements Initializable {
     private void showAlbumDetails(AlbumClass album) {
         try {
             int albumId = album.getAlbumId();
-            // Cargar el archivo FXML de la ventana de lista de pistas
             FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaAlbums.fxml"));
             Parent root = loader.load();
-
-            // Obtener el controlador de la ventana de lista de pistas
             ControladorVentanaAlbums controller = loader.getController();
-
-            // Pasar la lista de pistas al controlador
             controller.initData(albumId);
-
-
-
-
-            // Crear una nueva escena con el contenido cargado desde el archivo FXML
             Scene scene = new Scene(root);
-
-            // Crear una nueva ventana y mostrarla
             Stage stage = new Stage();
             stage.setTitle("Lista de Pistas");
             stage.setScene(scene);
@@ -197,6 +207,10 @@ public class Controlador_VentanaCliente implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
+
 
 }
