@@ -85,7 +85,7 @@
                         <Font name="Constantia Bold" size="16.0" />
                      </font>
                   </Label>
-                  <HBox fx:id="MenuAlbums" alignment="CENTER" onMouseEntered="#cambiarFormaCursor" onMouseExited="#restaurarFormaCursor" onMousePressed="#cambiarFondoYfuncionalidadAlbum" onMouseReleased="#restaurarFondoYCursor" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                  <HBox fx:id="MenuAlbums" alignment="CENTER" onMouseEntered="#cambiarFormaCursor" onMouseExited="#restaurarFormaCursor" onMousePressed="#MostrarAlbums" onMouseReleased="#restaurarFondoYCursor" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -99,7 +99,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox id="hboxGeneros" fx:id="hboxGeneros" alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                  <HBox id="hboxGeneros" fx:id="hboxGeneros" onMouseEntered="#cambiarFormaCursorGeneros" onMouseExited="#restaurarFormaCursorGeneros" onMouseReleased="#restaurarFondoYCursorGeneros" onMousePressed="#MostrarGeneros" alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -113,7 +113,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="250.0" spacing="15.0">
+                  <HBox fx:id="hboxArtistas" alignment="CENTER" prefHeight="44.0" prefWidth="250.0" spacing="15.0" onMouseEntered="#cambiarFormaCursorArtistas" onMouseExited="#restaurarFormaCursorArtistas" onMouseReleased="#restaurarFondoYCursorArtistas" onMousePressed="#MostrarArtistas">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -137,7 +137,7 @@
                         <Font name="Constantia Bold" size="16.0" />
                      </font>
                   </Label>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                  <HBox fx:id="hboxPlaylist" onMouseEntered="#cambiarFormaCursorPlaylist" onMouseExited="#restaurarFormaCursorPlaylist" onMouseReleased="#restaurarFondoYCursorPlaylist" onMousePressed="#MostrarPlaylist" alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -152,7 +152,7 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0">
+                  <HBox fx:id="hboxMusicaGuardada" alignment="CENTER" prefHeight="46.0" prefWidth="250.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>

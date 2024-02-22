@@ -17,5 +17,6 @@
     <mapping class="Aplicacion.InvoicelineClass"/>
     <mapping class="Aplicacion.MediatypeClass"/>
     <mapping class="Aplicacion.TrackClass"/>
+
   </session-factory>
 </hibernate-configuration>
