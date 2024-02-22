@@ -99,7 +99,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox id="hboxGeneros" fx:id="hboxGeneros" onMouseEntered="#cambiarFormaCursorGeneros" onMouseExited="#restaurarFormaCursorGeneros" onMouseReleased="#restaurarFondoYCursorGeneros" onMousePressed="#MostrarGeneros" alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                  <HBox id="hboxGeneros" fx:id="hboxGeneros" alignment="CENTER" onMouseEntered="#cambiarFormaCursorGeneros" onMouseExited="#restaurarFormaCursorGeneros" onMousePressed="#MostrarGeneros" onMouseReleased="#restaurarFondoYCursorGeneros" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -113,7 +113,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox fx:id="hboxArtistas" alignment="CENTER" prefHeight="44.0" prefWidth="250.0" spacing="15.0" onMouseEntered="#cambiarFormaCursorArtistas" onMouseExited="#restaurarFormaCursorArtistas" onMouseReleased="#restaurarFondoYCursorArtistas" onMousePressed="#MostrarArtistas">
+                  <HBox fx:id="hboxArtistas" alignment="CENTER" onMouseEntered="#cambiarFormaCursorArtistas" onMouseExited="#restaurarFormaCursorArtistas" onMousePressed="#MostrarArtistas" onMouseReleased="#restaurarFondoYCursorArtistas" prefHeight="44.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -137,7 +137,7 @@
                         <Font name="Constantia Bold" size="16.0" />
                      </font>
                   </Label>
-                  <HBox fx:id="hboxPlaylist" onMouseEntered="#cambiarFormaCursorPlaylist" onMouseExited="#restaurarFormaCursorPlaylist" onMouseReleased="#restaurarFondoYCursorPlaylist" onMousePressed="#MostrarPlaylist" alignment="CENTER" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
+                  <HBox fx:id="hboxPlaylist" alignment="CENTER" onMouseEntered="#cambiarFormaCursorPlaylist" onMouseExited="#restaurarFormaCursorPlaylist" onMousePressed="#MostrarPlaylist" onMouseReleased="#restaurarFondoYCursorPlaylist" prefHeight="46.0" prefWidth="250.0" spacing="15.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -152,7 +152,7 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
-                  <HBox fx:id="hboxMusicaGuardada" alignment="CENTER" prefHeight="46.0" prefWidth="250.0">
+                  <HBox id="hboxMusicaGuardada" fx:id="hboxMusicaGuardada" alignment="CENTER" onMousePressed="#MostrarMusicaGuardada" prefHeight="46.0" prefWidth="250.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -197,7 +197,7 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label id="TextoInicio" fx:id="LabelAlbums" prefHeight="18.0" prefWidth="159.0" text="Inicio">
+            <Label id="TextoInicio" fx:id="LabelAlbums" prefHeight="30.0" prefWidth="307.0" text="Inicio">
                <font>
                   <Font name="Ebrima Bold" size="23.0" />
                </font>

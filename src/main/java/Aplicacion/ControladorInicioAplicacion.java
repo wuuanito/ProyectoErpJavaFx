@@ -24,11 +24,7 @@ public class ControladorInicioAplicacion implements Initializable {
 
     @FXML
     private Button loginButton;
-    @FXML
-    private Button usuarioNuevo;
 
-    @FXML
-    private TextField userField;
 
     @FXML
     private TextField campouser;
@@ -36,23 +32,6 @@ public class ControladorInicioAplicacion implements Initializable {
     @FXML
     private PasswordField campopsswd;
 
-    @FXML
-    private PasswordField passwordField;
-
-    @FXML
-    private ImageView logo;
-
-    @FXML
-    private AnchorPane anchorPane;
-
-    @FXML
-    private GridPane gridPane;
-
-    @FXML
-    private SplitPane splitPane;
-
-    @FXML
-    private Text enlaceCrearCuenta;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -60,26 +39,6 @@ public class ControladorInicioAplicacion implements Initializable {
 
     }
 
-
-
-    @FXML
-    private void crearCuenta(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("CreacionCuenta.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-            Stage miStage = (Stage) usuarioNuevo.getScene().getWindow();
-            miStage.close();
-            stage.setResizable(false);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     @FXML
     private void login(ActionEvent event) {
@@ -118,6 +77,30 @@ public class ControladorInicioAplicacion implements Initializable {
                 Stage miStage = (Stage) loginButton.getScene().getWindow();
                 miStage.close();
                 stage.setResizable(false);
+                //Pasar loginId a la siguiente ventana
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
+                    String query = "SELECT loginId FROM usuarios WHERE nombre = ? AND contrasena = ?";
+                    PreparedStatement stmt = conn.prepareStatement(query);
+                    stmt.setString(1, usuario);
+                    stmt.setString(2, contrasena);
+                    ResultSet rs = stmt.executeQuery();
+                    //Pasar el loginId a la siguiente ventana
+                    if (rs.next()) {
+                        if (tipoUsuario.equals("empleado")) {
+                            //ControladorVentanaEmpleados.loginId = rs.getInt("loginId");
+                        } else if (tipoUsuario.equals("cliente")) {
+                            Controlador_VentanaCliente.loginId = rs.getInt("loginId");
+                            System.out.println("LoginId: " + Controlador_VentanaCliente.loginId);
+                        }
+                    }
+
+                    rs.close();
+                    stmt.close();
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

@@ -20,15 +20,19 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.w3c.dom.Document;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.*;
 
+
 public class Controlador_VentanaCliente implements Initializable {
 
     public static String usuario;
+    public static int loginId;
     @FXML
     private Label LabelAlbums;
     @FXML
@@ -41,6 +45,7 @@ public class Controlador_VentanaCliente implements Initializable {
     @FXML
     private HBox hboxPlaylist;
 
+    @FXML HBox hboxMusicaGuardada;
 
 
     @FXML
@@ -65,23 +70,18 @@ public class Controlador_VentanaCliente implements Initializable {
     private ListView<?> suggestionsListView;
 
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-
-        InfoUsuario.setText(usuario);
-
-        //Al cerrar la ventana salga dos opciones
-        //1. Cerrar la ventana
-
-
-
+            InfoUsuario.setText(usuario);
 
     }
 
     @FXML
     private void MostrarGeneros() {
+
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxGeneros.setStyle("-fx-background-color: #E0E0E0;");
@@ -124,6 +124,7 @@ public class Controlador_VentanaCliente implements Initializable {
             tableView.setItems(filteredData);
         });
     }
+
     @FXML
     private void MostrarArtistas() {
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("artistId"));
@@ -168,6 +169,48 @@ public class Controlador_VentanaCliente implements Initializable {
             tableView.setItems(filteredData);
         });
     }
+
+    @FXML
+    private void MostrarMusicaGuardada(){
+        hboxPlaylist.setStyle("-fx-background-color: #E0E0E0;");
+        LabelAlbums.setText("Musica Guardada");
+
+        hboxPlaylist.getScene().setCursor(Cursor.HAND);
+        idColumn.setCellValueFactory(param -> new SimpleObjectProperty<>(param.getValue().get("TrackId")));
+        titleColumn.setCellValueFactory(param -> new SimpleObjectProperty<>(param.getValue().get("Name")));
+
+        Connection conn = null;
+        ObservableList<Object> data = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
+            String query = "SELECT Track.TrackId, Track.Name AS TrackName\n" +
+                    "FROM Invoice\n" +
+                    "JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId\n" +
+                    "JOIN Customer ON Invoice.CustomerId = Customer.CustomerId\n" +
+                    "JOIN Track ON InvoiceLine.TrackId = Track.TrackId\n" +
+                    "WHERE Customer.CustomerId = '" + loginId + "';";
+
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+
+            data = FXCollections.observableArrayList();
+
+            while (rs.next()) {
+                int TrackId = rs.getInt("TrackId");
+                String Name = rs.getString("TrackName"); // Corrected column name to TrackName
+                Map<String, Object> row = new HashMap<>();
+                row.put("TrackId", TrackId);
+                row.put("Name", Name);
+                data.add(row);
+            }
+
+            tableView.setItems(data);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     @FXML
     private void MostrarPlaylist() {
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("playlistId"));
@@ -232,9 +275,6 @@ public class Controlador_VentanaCliente implements Initializable {
     }
 
 
-
-
-
     @FXML
     private void MostrarAlbums() {
         MenuAlbums.setStyle("-fx-background-color: #E0E0E0;");
@@ -287,41 +327,13 @@ public class Controlador_VentanaCliente implements Initializable {
                     Object obj = row.getItem();
                     if (obj instanceof AlbumClass) {
                         AlbumClass album = (AlbumClass) obj;
-                        int albumId = album.getAlbumId();
-                        System.out.println("AlbumId seleccionado: " + albumId);
-                        try {
-                            // Cargar el archivo FXML de la ventana de lista de pistas
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaAlbums.fxml"));
-                            Parent root = loader.load();
-
-                            // Obtener el controlador de la ventana de lista de pistas
-                            ControladorVentanaAlbums controller = loader.getController();
-
-                            // Pasar la lista de pistas al controlador
-                            controller.initData(albumId);
-                            //pasar el nombre del album
-                            controller.initData2(album.getTitle());
-
-                            // Crear una nueva escena con el contenido cargado desde el archivo FXML
-                            Scene scene = new Scene(root);
-
-                            // Crear una nueva ventana y mostrarla
-                            Stage stage = new Stage();
-                            stage.setTitle("Lista de Pistas");
-                            stage.setScene(scene);
-                            stage.show();
-                            stage.setResizable(false);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        showAlbumDetails(album);
                     }
                 }
             });
             return row;
         });
     }
-
-
 
 
     @FXML
@@ -332,6 +344,7 @@ public class Controlador_VentanaCliente implements Initializable {
         // Restaurar el cursor al predeterminado
         MenuAlbums.getScene().setCursor(Cursor.DEFAULT);
     }
+
     @FXML
     private void cambiarFormaCursor() {
         MenuAlbums.getScene().setCursor(Cursor.HAND);
@@ -345,6 +358,7 @@ public class Controlador_VentanaCliente implements Initializable {
         MenuAlbums.setStyle("-fx-background-color: transparent;");
 
     }
+
     @FXML
     private void restaurarFondoYCursorGeneros() {
         // Restaurar el fondo del HBox al color original
@@ -353,6 +367,7 @@ public class Controlador_VentanaCliente implements Initializable {
         // Restaurar el cursor al predeterminado
         hboxGeneros.getScene().setCursor(Cursor.DEFAULT);
     }
+
     @FXML
     private void cambiarFormaCursorGeneros() {
         hboxGeneros.getScene().setCursor(Cursor.HAND);
@@ -366,6 +381,7 @@ public class Controlador_VentanaCliente implements Initializable {
         hboxGeneros.setStyle("-fx-background-color: transparent;");
 
     }
+
     @FXML
     private void restaurarFondoYCursorArtistas() {
         // Restaurar el fondo del HBox al color original
@@ -374,6 +390,7 @@ public class Controlador_VentanaCliente implements Initializable {
         // Restaurar el cursor al predeterminado
         hboxArtistas.getScene().setCursor(Cursor.DEFAULT);
     }
+
     @FXML
     private void cambiarFormaCursorArtistas() {
         hboxArtistas.getScene().setCursor(Cursor.HAND);
@@ -387,6 +404,7 @@ public class Controlador_VentanaCliente implements Initializable {
         hboxArtistas.setStyle("-fx-background-color: transparent;");
 
     }
+
     @FXML
     private void restaurarFondoYCursorPlaylist() {
         // Restaurar el fondo del HBox al color original
@@ -395,6 +413,7 @@ public class Controlador_VentanaCliente implements Initializable {
         // Restaurar el cursor al predeterminado
         hboxPlaylist.getScene().setCursor(Cursor.DEFAULT);
     }
+
     @FXML
     private void cambiarFormaCursorPlaylist() {
         hboxPlaylist.getScene().setCursor(Cursor.HAND);
@@ -408,6 +427,29 @@ public class Controlador_VentanaCliente implements Initializable {
         hboxPlaylist.setStyle("-fx-background-color: transparent;");
 
     }
+    @FXML
+    private void restaurarFondoYCursorMusicaGuardada() {
+        // Restaurar el fondo del HBox al color original
+        hboxPlaylist.setStyle("-fx-background-color: transparent;");
+
+        // Restaurar el cursor al predeterminado
+        hboxPlaylist.getScene().setCursor(Cursor.DEFAULT);
+    }
+
+    @FXML
+    private void cambiarFormaCursorMusicaGuardada() {
+        hboxPlaylist.getScene().setCursor(Cursor.HAND);
+        hboxPlaylist.setStyle("-fx-background-color: #E0E0E0;");
+
+    }
+
+    @FXML
+    private void restaurarFormaCursorMusicaGuardada() {
+        hboxPlaylist.getScene().setCursor(Cursor.DEFAULT);
+        hboxPlaylist.setStyle("-fx-background-color: transparent;");
+
+    }
+
     private void showAlbumDetails(AlbumClass album) {
         try {
             int albumId = album.getAlbumId();
@@ -425,8 +467,6 @@ public class Controlador_VentanaCliente implements Initializable {
         }
 
     }
-
-
 
 
 }
