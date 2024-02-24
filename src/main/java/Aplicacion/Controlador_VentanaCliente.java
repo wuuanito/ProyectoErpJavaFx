@@ -469,4 +469,20 @@ public class Controlador_VentanaCliente implements Initializable {
     }
 
 
+    @FXML
+    private void abrirVentanaCompras() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaCompras.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setTitle("Compras");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

@@ -185,7 +185,7 @@
                               <Image url="@Imagenes/compra.png" />
                            </image>
                         </ImageView>
-                        <Button mnemonicParsing="false" style="-fx-background-radius: 20; -fx-background-color: black;" text="Comprar Cancion" />
+                        <Button mnemonicParsing="false" onAction="#abrirVentanaCompras" style="-fx-background-radius: 20; -fx-background-color: orange;" text="Comprar Cancion" />
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
