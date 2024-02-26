@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Funcion de Clientes Completa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaCompras.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaCompras.fxml" afterDir="false" />
+    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Funcion de muestra Ventas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaCompras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaCompras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaCompras.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaCompras.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,9 @@
       <workItem from="1708570298900" duration="3317000" />
       <workItem from="1708614900126" duration="7477000" />
       <workItem from="1708795896864" duration="591000" />
-      <workItem from="1708812765961" duration="3403000" />
+      <workItem from="1708812765961" duration="3509000" />
+      <workItem from="1708960880240" duration="41000" />
+      <workItem from="1708960935258" duration="4172000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />
@@ -254,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708626722626</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Funcion de muestra Ventas">
+      <option name="closed" value="true" />
+      <created>1708816370571</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708816370571</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +286,7 @@
     <MESSAGE value="Inserccion de datos en tabla" />
     <MESSAGE value="Proyecto con creacion de usuarios implementada" />
     <MESSAGE value="Funcion de Clientes Completa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcion de Clientes Completa" />
+    <MESSAGE value="Funcion de muestra Ventas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funcion de muestra Ventas" />
   </component>
 </project>
