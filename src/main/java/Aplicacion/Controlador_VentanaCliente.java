@@ -1,10 +1,17 @@
 package Aplicacion;
 
+import com.itextpdf.kernel.colors.*;
+import com.itextpdf.layout.element.Paragraph;
+
+import com.itextpdf.layout.properties.TextAlignment;
 import javafx.beans.property.SimpleObjectProperty;
+
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,19 +21,30 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.util.Callback;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import org.w3c.dom.Document;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.NumberFormat;
 import java.util.*;
+
+import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.DeviceRgb;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Cell;
+import com.itextpdf.layout.element.Table;
+
+import java.io.File;
 
 
 public class Controlador_VentanaCliente implements Initializable {
@@ -69,6 +87,14 @@ public class Controlador_VentanaCliente implements Initializable {
     @FXML
     private ListView<?> suggestionsListView;
 
+    @FXML
+    private Button exportarPdf;
+
+    @FXML
+    private ComboBox<String> HistorialCompras;
+
+
+
 
 
     @Override
@@ -77,12 +103,79 @@ public class Controlador_VentanaCliente implements Initializable {
 
             InfoUsuario.setText(usuario);
 
+            fillComboBox();
+
+            HistorialCompras.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+                @Override
+                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                    if (newValue != null) {
+                        abrirVentanaFacturas(newValue);
+                    }
+                }
+            });
+
     }
 
-    @FXML
-    private void MostrarGeneros() {
+    private void abrirVentanaFacturas(String opcionSeleccionada) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaFacturas.fxml"));
+            Parent root = loader.load();
+            ControladorVentanaFacturas controller = loader.getController();
+            controller.initData(opcionSeleccionada,loginId);
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setTitle("Facturas");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-        idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
+
+    private void fillComboBox() {
+        ObservableList<String> options = FXCollections.observableArrayList();
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
+            String query = "SELECT InvoiceDate FROM Invoice WHERE CustomerId = ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, String.valueOf(loginId));
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                options.add(rs.getString("InvoiceDate"));
+                System.out.println(rs.getString("InvoiceDate"));
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        HistorialCompras.setItems(options);
+    }
+
+        @FXML
+    private void MostrarGeneros() {
+            fillComboBox();
+            HistorialCompras.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+                @Override
+                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                    if (newValue != null) {
+                        abrirVentanaFacturas(newValue);
+                    }
+                }
+            });
+
+            idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxGeneros.setStyle("-fx-background-color: #E0E0E0;");
         LabelAlbums.setText("Generos");
@@ -127,6 +220,8 @@ public class Controlador_VentanaCliente implements Initializable {
 
     @FXML
     private void MostrarArtistas() {
+        fillComboBox();
+
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("artistId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxArtistas.setStyle("-fx-background-color: #E0E0E0;");
@@ -172,7 +267,9 @@ public class Controlador_VentanaCliente implements Initializable {
 
     @FXML
     private void MostrarMusicaGuardada(){
-        hboxPlaylist.setStyle("-fx-background-color: #E0E0E0;");
+        fillComboBox();
+
+        hboxMusicaGuardada.setStyle("-fx-background-color: #E0E0E0;");
         LabelAlbums.setText("Musica Guardada");
 
         hboxPlaylist.getScene().setCursor(Cursor.HAND);
@@ -210,9 +307,65 @@ public class Controlador_VentanaCliente implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void exportarAPdf() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Guardar PDF");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF Files", "*.pdf"));
+        File file = fileChooser.showSaveDialog(new Stage());
+        if (file != null) {
+            try (PdfWriter writer = new PdfWriter(file);
+                 PdfDocument pdf = new PdfDocument(writer);
+                 Document document = new Document(pdf)) {
+
+                // Crear el título del documento PDF
+                Paragraph title = new Paragraph("Historial de Compras")
+                        .setFontSize(24)
+                        .setFontColor(ColorConstants.BLACK)
+                        .setBold()
+                        .setTextAlignment(TextAlignment.CENTER)
+                        .setMarginBottom(20);
+                document.add(title);
+
+                // Crear la tabla en el documento PDF
+                Table pdfTable = new Table(new float[]{2, 4, 3, 2}).useAllAvailableWidth();
+
+                // Configurar el encabezado de la tabla
+                pdfTable.addHeaderCell("Fecha").setBold();
+                pdfTable.addHeaderCell("Dirección de envío").setBold();
+                pdfTable.addHeaderCell("País").setBold();
+                pdfTable.addHeaderCell("Total").setBold();
+
+                // Realizar la consulta a la base de datos
+                try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
+                     PreparedStatement ps = conn.prepareStatement("SELECT InvoiceDate, BillingAddress, BillingCountry, Total FROM Invoice WHERE CustomerId = ?")) {
+                    ps.setString(1, String.valueOf(loginId));
+                    try (ResultSet rs = ps.executeQuery()) {
+                        // Agregar las filas a la tabla del PDF
+                        while (rs.next()) {
+                            pdfTable.addCell(rs.getString("InvoiceDate"));
+                            pdfTable.addCell(rs.getString("BillingAddress"));
+                            pdfTable.addCell(rs.getString("BillingCountry"));
+                            pdfTable.addCell(NumberFormat.getCurrencyInstance().format(rs.getDouble("Total")));
+                        }
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+
+                // Agregar la tabla al documento
+                document.add(pdfTable);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 
     @FXML
     private void MostrarPlaylist() {
+        fillComboBox();
+
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("playlistId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxPlaylist.setStyle("-fx-background-color: #E0E0E0;");
@@ -277,6 +430,8 @@ public class Controlador_VentanaCliente implements Initializable {
 
     @FXML
     private void MostrarAlbums() {
+        fillComboBox();
+
         MenuAlbums.setStyle("-fx-background-color: #E0E0E0;");
         MenuAlbums.getScene().setCursor(Cursor.HAND);
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("albumId"));
@@ -430,23 +585,23 @@ public class Controlador_VentanaCliente implements Initializable {
     @FXML
     private void restaurarFondoYCursorMusicaGuardada() {
         // Restaurar el fondo del HBox al color original
-        hboxPlaylist.setStyle("-fx-background-color: transparent;");
+        hboxMusicaGuardada.setStyle("-fx-background-color: transparent;");
 
         // Restaurar el cursor al predeterminado
-        hboxPlaylist.getScene().setCursor(Cursor.DEFAULT);
+        hboxMusicaGuardada.getScene().setCursor(Cursor.DEFAULT);
     }
 
     @FXML
     private void cambiarFormaCursorMusicaGuardada() {
-        hboxPlaylist.getScene().setCursor(Cursor.HAND);
-        hboxPlaylist.setStyle("-fx-background-color: #E0E0E0;");
+        hboxMusicaGuardada.getScene().setCursor(Cursor.HAND);
+        hboxMusicaGuardada.setStyle("-fx-background-color: #E0E0E0;");
 
     }
 
     @FXML
     private void restaurarFormaCursorMusicaGuardada() {
-        hboxPlaylist.getScene().setCursor(Cursor.DEFAULT);
-        hboxPlaylist.setStyle("-fx-background-color: transparent;");
+        hboxMusicaGuardada.getScene().setCursor(Cursor.DEFAULT);
+        hboxMusicaGuardada.setStyle("-fx-background-color: transparent;");
 
     }
 

@@ -10,7 +10,9 @@ module Aplicacion {
     requires java.sql;
     requires org.hibernate.orm.core;
     requires java.persistence;
-
+    requires io;
+    requires kernel;
+    requires layout;
 
 
     opens Aplicacion to org.hibernate.orm.core, javafx.fxml;
