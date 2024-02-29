@@ -109,7 +109,7 @@ public class Controlador_VentanaCliente implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-            InfoUsuario.setText(usuario);
+        InfoUsuario.setText(usuario);
 
         // Cargar la configuración al iniciar la ventana
         configuracion = Configuracion.cargarConfiguracion();
@@ -125,6 +125,8 @@ public class Controlador_VentanaCliente implements Initializable {
             // Guardar la configuración al cambiar el estado del checkbox
             configuracion.guardarConfiguracion();
         });
+        fillComboBox();
+
     }
     private void cambiarEstilo(boolean modoOscuro) {
         if (modoOscuro) {
@@ -137,22 +139,22 @@ public class Controlador_VentanaCliente implements Initializable {
     }
 
 
-public void cerrarSesion(){
-    Stage stage = (Stage) salir.getScene().getWindow();
-    stage.close();
+    public void cerrarSesion(){
+        Stage stage = (Stage) salir.getScene().getWindow();
+        stage.close();
 
-    try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PantallaInicio.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        Stage stage2 = new Stage();
-        stage2.setTitle("Inicio");
-        stage2.setScene(scene);
-        stage2.show();
-    } catch (IOException e) {
-        e.printStackTrace();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PantallaInicio.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage2 = new Stage();
+            stage2.setTitle("Inicio");
+            stage2.setScene(scene);
+            stage2.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-}
 
 
 
@@ -197,17 +199,12 @@ public void cerrarSesion(){
 
     }
 
-        @FXML
+    @FXML
     private void MostrarGeneros() {
-            if (HistorialCompras.getValue() != null) {
-                fillComboBox();
-                // Resto del código...
-            } else {
-                // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
-            }
-          
+        fillComboBox();
 
-            idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
+
+        idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxGeneros.setStyle("-fx-background-color: #E0E0E0;");
         LabelAlbums.setText("Generos");
@@ -252,12 +249,8 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarArtistas() {
-        if (HistorialCompras.getValue() != null) {
-            fillComboBox();
-            // Resto del código...
-        } else {
-            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
-        }
+        fillComboBox();
+
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("artistId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxArtistas.setStyle("-fx-background-color: #E0E0E0;");
@@ -303,12 +296,8 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarMusicaGuardada(){
-        if (HistorialCompras.getValue() != null) {
-            fillComboBox();
-            // Resto del código...
-        } else {
-            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
-        }
+        fillComboBox();
+
 
         hboxMusicaGuardada.setStyle("-fx-background-color: #E0E0E0;");
         LabelAlbums.setText("Musica Guardada");
@@ -415,12 +404,8 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarPlaylist() {
-        if (HistorialCompras.getValue() != null) {
-            fillComboBox();
-            // Resto del código...
-        } else {
-            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
-        }
+        fillComboBox();
+
 
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("playlistId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
@@ -486,12 +471,9 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarAlbums() {
-        if (HistorialCompras.getValue() != null) {
+
             fillComboBox();
-            // Resto del código...
-        } else {
-            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
-        }
+
 
         MenuAlbums.setStyle("-fx-background-color: #E0E0E0;");
         MenuAlbums.getScene().setCursor(Cursor.HAND);
@@ -690,30 +672,30 @@ public void cerrarSesion(){
     @FXML
     private void abrirVentanaCompras() {
 
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaCompras.fxml"));
-                Parent root = loader.load();
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                stage.setTitle("Compras");
-                stage.setScene(scene);
-                stage.show();
-                // Pasar customerId a la ventana de compras
-                ControladorVentanaCompras controller = loader.getController();
-                controller.initData(loginId);
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaCompras.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setTitle("Compras");
+            stage.setScene(scene);
+            stage.show();
+            // Pasar customerId a la ventana de compras
+            ControladorVentanaCompras controller = loader.getController();
+            controller.initData(loginId);
 
-                // Marcar la ventana como abierta
-                ventanaComprasAbierta = true;
+            // Marcar la ventana como abierta
+            ventanaComprasAbierta = true;
 
-                // Manejar el evento de cierre de la ventana
-                stage.setOnCloseRequest(windowEvent -> {
-                    // Llamar al método para cerrar la ventana
-                });
+            // Manejar el evento de cierre de la ventana
+            stage.setOnCloseRequest(windowEvent -> {
+                // Llamar al método para cerrar la ventana
+            });
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
 
 
 

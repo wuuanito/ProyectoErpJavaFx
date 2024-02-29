@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Añadido la funcionalidad de tema oscuro/claro">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaCanciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaClientes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaEmpleados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaEmpleados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/cliente.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/empleados.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaCanciones.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaClientes.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaEmpleados.fxml" afterDir="false" />
+    <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Solo Falta Funcionalidad de empleados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaEmpleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaEmpleados.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +211,7 @@
       <workItem from="1709047401347" duration="62000" />
       <workItem from="1709132060897" duration="13752000" />
       <workItem from="1709173077210" duration="10395000" />
-      <workItem from="1709184411301" duration="6274000" />
+      <workItem from="1709184411301" duration="8690000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />
@@ -308,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709187393443</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Solo Falta Funcionalidad de empleados">
+      <option name="closed" value="true" />
+      <created>1709190838973</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709190838973</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +337,7 @@
     <MESSAGE value="Funcion de muestra Ventas con actualizacion de precio" />
     <MESSAGE value="Funcionalidad Clientes hecha al 100€" />
     <MESSAGE value="Añadido la funcionalidad de tema oscuro/claro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido la funcionalidad de tema oscuro/claro" />
+    <MESSAGE value="Solo Falta Funcionalidad de empleados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solo Falta Funcionalidad de empleados" />
   </component>
 </project>

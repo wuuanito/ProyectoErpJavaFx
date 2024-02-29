@@ -51,7 +51,7 @@ public class InicioAplicacion extends Application {
             }
 
 
-    } catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
