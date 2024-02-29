@@ -52,7 +52,7 @@ public class ControladorInicioAplicacion implements Initializable {
                 if (tipoUsuario.equals("empleado")) {
                     ventanaFXML = "VentanaEmpleados.fxml";
                     //Pasar el usuario a la siguiente ventana
-                    //ControladorVentanaEmpleados.usuario = usuario;
+                    Controlador_VentanaEmpleados.usuario = usuario;
                 } else if (tipoUsuario.equals("cliente")) {
                     ventanaFXML = "VentanaClientes.fxml";
                     //Pasar el usuario a la siguiente ventana
@@ -66,40 +66,18 @@ public class ControladorInicioAplicacion implements Initializable {
                     return;
                 }
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(ventanaFXML));
-                Parent root = loader.load();
-                Scene scene = new Scene(root);
+                if (ventanaFXML != null) { // Verificar que ventanaFXML no sea null
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource(ventanaFXML));
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
 
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
 
-                Stage miStage = (Stage) loginButton.getScene().getWindow();
-                miStage.close();
-                stage.setResizable(false);
-                //Pasar loginId a la siguiente ventana
-                try {
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
-                    String query = "SELECT loginId FROM usuarios WHERE nombre = ? AND contrasena = ?";
-                    PreparedStatement stmt = conn.prepareStatement(query);
-                    stmt.setString(1, usuario);
-                    stmt.setString(2, contrasena);
-                    ResultSet rs = stmt.executeQuery();
-                    //Pasar el loginId a la siguiente ventana
-                    if (rs.next()) {
-                        if (tipoUsuario.equals("empleado")) {
-                            //ControladorVentanaEmpleados.loginId = rs.getInt("loginId");
-                        } else if (tipoUsuario.equals("cliente")) {
-                            Controlador_VentanaCliente.loginId = rs.getInt("loginId");
-                            System.out.println("LoginId: " + Controlador_VentanaCliente.loginId);
-                        }
-                    }
-
-                    rs.close();
-                    stmt.close();
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
+                    Stage miStage = (Stage) loginButton.getScene().getWindow();
+                    miStage.close();
+                    stage.setResizable(false);
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);

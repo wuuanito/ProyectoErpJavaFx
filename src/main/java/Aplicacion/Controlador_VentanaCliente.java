@@ -111,7 +111,6 @@ public class Controlador_VentanaCliente implements Initializable {
 
             InfoUsuario.setText(usuario);
 
-            fillComboBox();
         // Cargar la configuración al iniciar la ventana
         configuracion = Configuracion.cargarConfiguracion();
         // Establecer el estado del checkbox basado en la configuración cargada
@@ -200,7 +199,12 @@ public void cerrarSesion(){
 
         @FXML
     private void MostrarGeneros() {
-            fillComboBox();
+            if (HistorialCompras.getValue() != null) {
+                fillComboBox();
+                // Resto del código...
+            } else {
+                // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
+            }
           
 
             idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
@@ -248,8 +252,12 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarArtistas() {
-        fillComboBox();
-
+        if (HistorialCompras.getValue() != null) {
+            fillComboBox();
+            // Resto del código...
+        } else {
+            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
+        }
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("artistId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
         hboxArtistas.setStyle("-fx-background-color: #E0E0E0;");
@@ -295,7 +303,12 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarMusicaGuardada(){
-        fillComboBox();
+        if (HistorialCompras.getValue() != null) {
+            fillComboBox();
+            // Resto del código...
+        } else {
+            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
+        }
 
         hboxMusicaGuardada.setStyle("-fx-background-color: #E0E0E0;");
         LabelAlbums.setText("Musica Guardada");
@@ -402,7 +415,12 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarPlaylist() {
-        fillComboBox();
+        if (HistorialCompras.getValue() != null) {
+            fillComboBox();
+            // Resto del código...
+        } else {
+            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
+        }
 
         idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("playlistId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
@@ -468,7 +486,12 @@ public void cerrarSesion(){
 
     @FXML
     private void MostrarAlbums() {
-        fillComboBox();
+        if (HistorialCompras.getValue() != null) {
+            fillComboBox();
+            // Resto del código...
+        } else {
+            // Mostrar un mensaje de error o realizar alguna acción adecuada si el valor seleccionado es nulo
+        }
 
         MenuAlbums.setStyle("-fx-background-color: #E0E0E0;");
         MenuAlbums.getScene().setCursor(Cursor.HAND);
