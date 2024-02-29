@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Funcion de muestra Ventas con actualizacion de precio">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/cerrar_sesion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaEmpleados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_bell_24px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_ellipsis_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_empty_trash_32px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_help_32px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_james_bond_32px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_microsoft_excel_48px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_microsoft_powerpoint_2019_48px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_microsoft_word_48px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_pin_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_settings_26px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_slider_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_star_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_steering_wheel_64px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_sync_settings_24px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_time_machine_30px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_widescreen_24px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/icons8_windows_homegroup_32px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaEmpleados.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaCompras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorVentanaCompras.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaCompras.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaCompras.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +41,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,44 +73,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.InicioAplicacion.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JPA.DatabaseSchemaImportDialog": "6e33377d-8f68-4a63-9740-162f91aeaab9",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Juan/Desktop/Programacion/ProyectoErpJavaFx/src/main/java/Aplicacion",
-    "last_opened_file_path": "C:/Users/Juan/Downloads/itext.jar/itext.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.39310345",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InicioAplicacion.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;6e33377d-8f68-4a63-9740-162f91aeaab9&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Juan/Desktop/Programacion/ProyectoErpJavaFx/src/main/java/Aplicacion&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juan/Downloads/itext.jar/itext.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39310345&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Aplicacion" />
@@ -105,9 +123,9 @@
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\Imagenes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\Desktop\Programacion\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
       <recent name="C:\Users\Juan\Desktop\Programacion\ProyectoErpJavaFx\src\main\java\Aplicacion" />
       <recent name="C:\Users\Juan\Desktop\Programacion\ProyectoErpJavaFx\src\main\resources\Aplicacion" />
-      <recent name="C:\Users\Juan\Desktop\Programacion\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion" />
       <recent name="C:\Users\Juan\Desktop\ProyectoErpJavaFx\src\main\resources\Aplicacion\Imagenes" />
     </key>
@@ -211,7 +229,8 @@
       <workItem from="1708960880240" duration="41000" />
       <workItem from="1708960935258" duration="4222000" />
       <workItem from="1709047401347" duration="62000" />
-      <workItem from="1709132060897" duration="13691000" />
+      <workItem from="1709132060897" duration="13752000" />
+      <workItem from="1709173077210" duration="10355000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />
@@ -277,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708966023107</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Funcion de muestra Ventas con actualizacion de precio">
+      <option name="closed" value="true" />
+      <created>1709157028070</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709157028070</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

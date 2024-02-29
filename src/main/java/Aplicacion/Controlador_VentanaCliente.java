@@ -93,6 +93,9 @@ public class Controlador_VentanaCliente implements Initializable {
     @FXML
     private ComboBox<String> HistorialCompras;
 
+    @FXML
+    private Button salir;
+
 
 
 
@@ -105,32 +108,29 @@ public class Controlador_VentanaCliente implements Initializable {
 
             fillComboBox();
 
-            HistorialCompras.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-                @Override
-                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                    if (newValue != null) {
-                        abrirVentanaFacturas(newValue);
-                    }
-                }
-            });
+
 
     }
 
-    private void abrirVentanaFacturas(String opcionSeleccionada) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaFacturas.fxml"));
-            Parent root = loader.load();
-            ControladorVentanaFacturas controller = loader.getController();
-            controller.initData(opcionSeleccionada,loginId);
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setTitle("Facturas");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+public void cerrarSesion(){
+    Stage stage = (Stage) salir.getScene().getWindow();
+    stage.close();
+
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PantallaInicio.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage2 = new Stage();
+        stage2.setTitle("Inicio");
+        stage2.setScene(scene);
+        stage2.show();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
+
+
 
 
     private void fillComboBox() {
@@ -144,7 +144,6 @@ public class Controlador_VentanaCliente implements Initializable {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 options.add(rs.getString("InvoiceDate"));
-                System.out.println(rs.getString("InvoiceDate"));
 
             }
 
@@ -161,19 +160,23 @@ public class Controlador_VentanaCliente implements Initializable {
             }
         }
         HistorialCompras.setItems(options);
+
+        //seleccionar el id de la compra
+        HistorialCompras.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                System.out.println("Item seleccionado: " + t1);
+            }
+        });
+
+
+
     }
 
         @FXML
     private void MostrarGeneros() {
             fillComboBox();
-            HistorialCompras.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-                @Override
-                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                    if (newValue != null) {
-                        abrirVentanaFacturas(newValue);
-                    }
-                }
-            });
+          
 
             idColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("genreId"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<Map<String, Object>, Object>("name"));
@@ -319,7 +322,7 @@ public class Controlador_VentanaCliente implements Initializable {
                  Document document = new Document(pdf)) {
 
                 // Crear el título del documento PDF
-                Paragraph title = new Paragraph("Historial de Compras")
+                Paragraph title = new Paragraph("Fecha de factura: " + HistorialCompras.getValue() + "\n\n" + "Historial de compras")
                         .setFontSize(24)
                         .setFontColor(ColorConstants.BLACK)
                         .setBold()
@@ -328,30 +331,39 @@ public class Controlador_VentanaCliente implements Initializable {
                 document.add(title);
 
                 // Crear la tabla en el documento PDF
-                Table pdfTable = new Table(new float[]{2, 4, 3, 2}).useAllAvailableWidth();
+                Table pdfTable = new Table(new float[]{2, 4, 3}).useAllAvailableWidth();
 
                 // Configurar el encabezado de la tabla
-                pdfTable.addHeaderCell("Fecha").setBold();
-                pdfTable.addHeaderCell("Dirección de envío").setBold();
-                pdfTable.addHeaderCell("País").setBold();
-                pdfTable.addHeaderCell("Total").setBold();
+                pdfTable.addHeaderCell("Nº").setBold();
+                pdfTable.addHeaderCell("Cancion").setBold();
+                pdfTable.addHeaderCell("Precio").setBold();
+
+                double total = 0.0; // Variable para almacenar el precio total
 
                 // Realizar la consulta a la base de datos
                 try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
-                     PreparedStatement ps = conn.prepareStatement("SELECT InvoiceDate, BillingAddress, BillingCountry, Total FROM Invoice WHERE CustomerId = ?")) {
+                     PreparedStatement ps = conn.prepareStatement("SELECT Track.TrackId,Track.Name, InvoiceLine.UnitPrice FROM InvoiceLine JOIN Track ON InvoiceLine.TrackId = Track.TrackId JOIN Invoice ON InvoiceLine.InvoiceId = Invoice.InvoiceId WHERE Invoice.CustomerId = ? AND Invoice.InvoiceDate = ?")) {
                     ps.setString(1, String.valueOf(loginId));
+                    ps.setString(2, HistorialCompras.getValue());
                     try (ResultSet rs = ps.executeQuery()) {
                         // Agregar las filas a la tabla del PDF
                         while (rs.next()) {
-                            pdfTable.addCell(rs.getString("InvoiceDate"));
-                            pdfTable.addCell(rs.getString("BillingAddress"));
-                            pdfTable.addCell(rs.getString("BillingCountry"));
-                            pdfTable.addCell(NumberFormat.getCurrencyInstance().format(rs.getDouble("Total")));
+                            pdfTable.addCell(rs.getString("TrackId"));
+                            pdfTable.addCell(rs.getString("Name"));
+                            pdfTable.addCell(rs.getString("UnitPrice")+ " €");
+
+                            // Sumar el precio al total
+                            total += rs.getDouble("UnitPrice");
                         }
                     }
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
+
+                // Agregar la fila del total al final de la tabla
+                pdfTable.addFooterCell("Total:").setBold();
+                pdfTable.addFooterCell("").setBold();
+                pdfTable.addFooterCell(String.valueOf(total)+" €").setBold();
 
                 // Agregar la tabla al documento
                 document.add(pdfTable);
@@ -360,6 +372,7 @@ public class Controlador_VentanaCliente implements Initializable {
             }
         }
     }
+
 
 
     @FXML
@@ -624,20 +637,38 @@ public class Controlador_VentanaCliente implements Initializable {
     }
 
 
+    private static boolean ventanaComprasAbierta = false;
+
     @FXML
     private void abrirVentanaCompras() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaCompras.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setTitle("Compras");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaCompras.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setTitle("Compras");
+                stage.setScene(scene);
+                stage.show();
+                // Pasar customerId a la ventana de compras
+                ControladorVentanaCompras controller = loader.getController();
+                controller.initData(loginId);
+
+                // Marcar la ventana como abierta
+                ventanaComprasAbierta = true;
+
+                // Manejar el evento de cierre de la ventana
+                stage.setOnCloseRequest(windowEvent -> {
+                    // Llamar al método para cerrar la ventana
+                });
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-    }
+
+
+
 
 
 }

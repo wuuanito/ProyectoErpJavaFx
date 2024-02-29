@@ -50,9 +50,11 @@ public class InicioAplicacion extends Application {
                 e.printStackTrace();
             }
 
+
     } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
 
 
     }
