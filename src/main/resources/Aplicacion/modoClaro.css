@@ -1,37 +1,37 @@
-/* Estilos para el modo noche */
+/* Estilos para el modo claro */
 
-/* Fondo oscuro */
+/* Fondo claro */
 .root {
-    -fx-background-color: #1a1a1a;
+    -fx-background-color: #f5f5f5;
 }
 
 .header {
-    -fx-background-color: #333333;
+    -fx-background-color: #cccccc;
 }
 
 .suggestions-list-view {
-    -fx-background-color: #262626;
+    -fx-background-color: #f0f0f0;
 }
 
-/* Texto blanco */
+/* Texto negro */
 .label,
 .button,
 .text-field,
 .text-area,
 .combo-box {
-    -fx-text-fill: white;
+    -fx-text-fill: black;
 }
 
 /* Botón de búsqueda */
 #searchField {
-    -fx-background-color: #4d4d4d;
-    -fx-text-inner-color: white;
+    -fx-background-color: #e0e0e0;
+    -fx-text-inner-color: black;
     -fx-background-radius: 20;
 }
 
 /* ListView de sugerencias */
 #suggestionsListView {
-    -fx-background-color: #4d4d4d;
+    -fx-background-color: #e0e0e0;
 }
 
 /* Menú lateral */
@@ -40,12 +40,12 @@
 #hboxPlaylist,
 #hboxMusicaGuardada,
 #hboxtabla {
-    -fx-background-color: #4d4d4d;
+    -fx-background-color: #e0e0e0;
 }
 
 /* Separadores */
 Separator {
-    -fx-background-color: white;
+    -fx-background-color: black;
 }
 
 /* Botón de compra */
@@ -56,24 +56,24 @@ Separator {
 
 /* Botón de descarga */
 #exportarPdf {
-    -fx-background-color: white;
+    -fx-background-color: black;
     -fx-border-color: black;
 }
 
 /* Texto de la tabla */
 .table-view .column-header-background {
-    -fx-background-color: #4d4d4d;
+    -fx-background-color: #e0e0e0;
 }
 
 .table-view .column-header,
 .table-view .table-cell {
-    -fx-background-color: #4d4d4d;
+    -fx-background-color: #e0e0e0;
     -fx-border-color: #707070;
 }
 
 /* Botón de salir */
 #salir {
-    -fx-background-color: #4d4d4d;
+    -fx-background-color: #e0e0e0;
 }
 
 /* Cambio de cursor */

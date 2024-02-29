@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -96,9 +97,13 @@ public class Controlador_VentanaCliente implements Initializable {
     @FXML
     private Button salir;
 
+    @FXML
+    private CheckBox ModoOscuro;
 
+    @FXML
+    private BorderPane borderPane;
 
-
+    private Configuracion configuracion;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -107,9 +112,29 @@ public class Controlador_VentanaCliente implements Initializable {
             InfoUsuario.setText(usuario);
 
             fillComboBox();
+        // Cargar la configuración al iniciar la ventana
+        configuracion = Configuracion.cargarConfiguracion();
+        // Establecer el estado del checkbox basado en la configuración cargada
+        ModoOscuro.setSelected(configuracion.isModoOscuro());
+        // Aplicar el estilo según la configuración cargada
+        cambiarEstilo(configuracion.isModoOscuro());
 
-
-
+        // Agregar un listener al checkbox para cambiar la configuración y el estilo al seleccionar/deseleccionar
+        ModoOscuro.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            configuracion.setModoOscuro(newValue);
+            cambiarEstilo(newValue);
+            // Guardar la configuración al cambiar el estado del checkbox
+            configuracion.guardarConfiguracion();
+        });
+    }
+    private void cambiarEstilo(boolean modoOscuro) {
+        if (modoOscuro) {
+            borderPane.getStylesheets().clear();
+            borderPane.getStylesheets().add(getClass().getResource("stylesheet.css").toExternalForm());
+        } else {
+            borderPane.getStylesheets().clear();
+            borderPane.getStylesheets().add(getClass().getResource("modoclaro.css").toExternalForm());
+        }
     }
 
 
