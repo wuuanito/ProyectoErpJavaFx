@@ -53,6 +53,7 @@ public class ControladorInicioAplicacion implements Initializable {
                     ventanaFXML = "VentanaEmpleados.fxml";
                     //Pasar el usuario a la siguiente ventana
                     //ControladorVentanaEmpleados.usuario = usuario;
+                    Controlador_VentanaEmpleados.usuario = usuario;
                 } else if (tipoUsuario.equals("cliente")) {
                     ventanaFXML = "VentanaClientes.fxml";
                     //Pasar el usuario a la siguiente ventana
@@ -118,7 +119,7 @@ public class ControladorInicioAplicacion implements Initializable {
         String tipoUsuario = null;
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
-            String query = "SELECT tipo FROM usuarios WHERE nombre = ? AND contrasena = ?";
+            String query = "SELECT tipo FROM usuarios WHERE nombre = ? AND contrasena = ? AND hide = 0";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, usuario);
             stmt.setString(2, contrasena);

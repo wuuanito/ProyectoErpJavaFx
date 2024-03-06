@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1fab833-89da-4dad-be8b-66f5e7009f5f" name="Changes" comment="Solo Falta Funcionalidad de empleados">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaNuevoUsuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaUsuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/ExamenJuanFrauca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/Extracto financiero_ 02 de mar. de 2024.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/Imagenes/MIN_[PROY]_Manual_Instalacion.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaNuevoUsuario.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaUsuarios.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorInicioAplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaCanciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaCanciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaClientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/ControladorSubVentanaEmpleados.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/InicioAplicacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaClientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Controlador_VentanaEmpleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aplicacion/CustomerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aplicacion/Em.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaCanciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaCanciones.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaClientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaEmpleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/SubVentanaEmpleados.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaEmpleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Aplicacion/VentanaEmpleados.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +227,12 @@
       <workItem from="1709132060897" duration="13752000" />
       <workItem from="1709173077210" duration="10395000" />
       <workItem from="1709184411301" duration="8690000" />
+      <workItem from="1709221762164" duration="4214000" />
+      <workItem from="1709317004531" duration="3000" />
+      <workItem from="1709487280461" duration="29000" />
+      <workItem from="1709487318347" duration="13356000" />
+      <workItem from="1709513443185" duration="69000" />
+      <workItem from="1709694023489" duration="8559000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion De una Pantalla Inicial Idonea">
       <option name="closed" value="true" />

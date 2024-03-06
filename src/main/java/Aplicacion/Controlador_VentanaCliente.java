@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
@@ -667,7 +668,6 @@ public class Controlador_VentanaCliente implements Initializable {
     }
 
 
-    private static boolean ventanaComprasAbierta = false;
 
     @FXML
     private void abrirVentanaCompras() {
@@ -685,7 +685,6 @@ public class Controlador_VentanaCliente implements Initializable {
             controller.initData(loginId);
 
             // Marcar la ventana como abierta
-            ventanaComprasAbierta = true;
 
             // Manejar el evento de cierre de la ventana
             stage.setOnCloseRequest(windowEvent -> {
@@ -696,8 +695,6 @@ public class Controlador_VentanaCliente implements Initializable {
             e.printStackTrace();
         }
     }
-
-
 
 
 

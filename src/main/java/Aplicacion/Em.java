@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "customer", schema = "chinook", catalog = "")
-public class CustomerClass {
+public class Em {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "CustomerId")
@@ -45,6 +45,21 @@ public class CustomerClass {
     @Basic
     @Column(name = "SupportRepId")
     private Integer supportRepId;
+
+    @Basic
+    @Column(name = "hide")
+    private Integer hide;
+
+    public Integer getHide() {
+        return hide;
+
+    }
+
+    public void setHide(Integer hide) {
+        this.hide = hide;
+    }
+
+
 
     public int getCustomerId() {
         return customerId;
@@ -155,7 +170,7 @@ public class CustomerClass {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CustomerClass that = (CustomerClass) o;
+        Em that = (Em) o;
 
         if (customerId != that.customerId) return false;
         if (firstName != null ? !firstName.equals(that.firstName) : that.firstName != null) return false;

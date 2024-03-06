@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.ControladorSubVentanaCanciones">
+<AnchorPane prefHeight="400.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplicacion.ControladorSubVentanaCanciones">
    <children>
-      <Button fx:id="boton" layoutX="264.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
+      <TextField fx:id="searchField" layoutX="146.0" layoutY="61.0" prefHeight="26.0" prefWidth="286.0" />
+      <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="444.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/buscar.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="146.0" layoutY="92.0" prefHeight="263.0" prefWidth="440.0">
+         <columns>
+            <TableColumn fx:id="tableNum" prefWidth="56.0" text="Nº" />
+            <TableColumn fx:id="tableNombre" prefWidth="383.20001220703125" text="Nombre" />
+         </columns>
+      </TableView>
+      <Text layoutX="29.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA DE CANCIONES" wrappingWidth="286.4000000000001">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Label id="labelSeleccionado" fx:id="labelSeleccionado" layoutX="491.0" layoutY="102.0" prefHeight="18.0" prefWidth="95.0" text="SELECCIONADO" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label id="nombreSeleccionad" fx:id="nombreSeleccionad" layoutX="486.0" layoutY="127.0" prefHeight="18.0" prefWidth="95.0" />
+      <Label id="apellidoSeleccionado" fx:id="apellidoSeleccionado" layoutX="486.0" layoutY="163.0" prefHeight="18.0" prefWidth="95.0" />
+      <Button fx:id="btnCanciones" onAction="#botonTracks" layoutX="41.0" layoutY="151.0" mnemonicParsing="false" text="Canciones"  />
+      <Button fx:id="btnAlbums" onAction="#botonAlbums" layoutX="41.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Albums" />
+      <Button fx:id="btnPlaylist" onAction="#botonPlaylist" layoutX="41.0" layoutY="252.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Playlist" />
+      <Button fx:id="nuevo" layoutX="392.0" layoutY="361.0" mnemonicParsing="false" text="Nuevo" />
+      <Button fx:id="modificar" layoutX="453.0" layoutY="361.0" mnemonicParsing="false" text="Modificar" />
+      <Button fx:id="eliminar" layoutX="529.0" layoutY="361.0" mnemonicParsing="false" text="Eliminar" />
    </children>
 </AnchorPane>

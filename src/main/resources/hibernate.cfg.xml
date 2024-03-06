@@ -10,7 +10,7 @@
     <property name="connection.password">root</property>
     <mapping class="Aplicacion.AlbumClass"/>
     <mapping class="Aplicacion.ArtistClass"/>
-    <mapping class="Aplicacion.CustomerClass"/>
+    <mapping class="Aplicacion.Em"/>
     <mapping class="Aplicacion.EmployeeClass"/>
     <mapping class="Aplicacion.GenreClass"/>
     <mapping class="Aplicacion.InvoiceClass"/>
